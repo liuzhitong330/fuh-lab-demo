@@ -1,0 +1,98 @@
+:root { --ink:#1a1a1a; --muted:#666; --rule:#ddd; --panel:#fcfcfc; --accent:#1f7a8c; --secondary:#c07a2a; }
+*, *::before, *::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; padding:0 1rem; color:var(--ink); background:#fff; font-family:Georgia, "Times New Roman", serif; font-size:18px; line-height:1.65; }
+.page { max-width:680px; margin:0 auto; padding:3rem 0 5rem; }
+h1 { margin:0 0 .4rem; font-size:1.5rem; line-height:1.25; }
+h2 { margin:2.4rem 0 .5rem; font-size:1.1rem; line-height:1.3; }
+p { margin:0 0 1rem; }
+a { color:inherit; text-underline-offset:3px; }
+.byline, .section-nav, .exp-label, .metric-row, figcaption, .searchbar, .chips, .readout, .comparison, footer { font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.byline { margin-bottom:2.4rem; color:#555; font-size:.9rem; line-height:1.6; }
+.section-nav { display:flex; flex-wrap:wrap; gap:.45rem 1rem; margin-bottom:2.4rem; font-size:.82rem; }
+.section-nav a { color:#555; text-decoration:none; }
+.opening { font-size:1.05rem; }
+hr { margin:2.4rem 0; border:0; border-top:1px solid var(--rule); }
+.experiment { margin:1.5rem 0; padding-left:1.2rem; border-left:3px solid var(--ink); }
+.experiment p { margin-top:.6rem; font-size:.92rem; }
+.exp-label, .label-inline { color:#777; font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; }
+.exp-title { margin-bottom:.6rem; font-size:1rem; font-weight:700; }
+.panel { margin:1rem 0; padding:1rem 1.1rem; border:1px solid #e0e0e0; border-radius:3px; background:var(--panel); }
+.searchbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:.6rem; }
+.searchbar input { flex:1 1 220px; min-width:0; padding:9px 13px; border:1px solid #bcc6d0; border-radius:5px; background:#fff; font:inherit; font-size:.95rem; }
+.searchbar input:focus { border-color:var(--accent); outline:2px solid var(--accent); }
+.searchbar button { padding:9px 16px; border:0; border-radius:5px; color:#fff; background:var(--accent); font:inherit; font-size:.88rem; cursor:pointer; }
+.searchbar button:focus-visible, .chips button:focus-visible, .comparison button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.chips { display:flex; flex-wrap:wrap; gap:.2rem .6rem; margin-bottom:.4rem; color:#777; font-size:.78rem; }
+.chips button { padding:0; border:0; border-bottom:1px dotted; color:var(--accent); background:none; font:inherit; cursor:pointer; }
+.viz { display:block; width:100%; max-width:600px; margin:0 auto; }
+.readout { margin-top:.7rem; padding:.65rem .9rem; border-radius:4px; background:#e6f1f3; font-size:.86rem; line-height:1.5; }
+.readout strong { color:var(--accent); }
+figcaption { margin-top:.6rem; color:#777; font-size:.78rem; line-height:1.45; }
+.metric-row { display:flex; flex-wrap:wrap; gap:2rem; margin:1rem 0; }
+.metric { display:flex; flex-direction:column; }
+.metric-val { font-size:1.4rem; font-weight:700; line-height:1; }
+.metric-desc { margin-top:.15rem; color:var(--muted); font-size:.8rem; }
+.label-inline { display:block; margin:.4rem 0 .8rem; }
+.comparison { display:grid; gap:.35rem; }
+.comparison button { display:grid; grid-template-columns:90px 1fr 90px; gap:.7rem; align-items:center; width:100%; padding:.35rem 0; border:0; background:none; color:#444; font:inherit; font-size:.78rem; text-align:left; cursor:pointer; }
+.comparison-track { height:14px; background:#e9eff0; }
+.comparison-fill { display:block; height:100%; background:var(--accent); }
+.methods-note { color:#444; font-size:.9rem; }
+footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid #eee; color:#777; font-size:.82rem; line-height:1.6; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media (max-width:540px) { body{font-size:17px;} .page{padding-top:2rem;} .metric-row{gap:1.2rem;} .comparison button{grid-template-columns:70px 1fr 72px;} }
+@media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto;} }
+
+/* Fuh Lab target layer — appended without changing the Ramani shell above. */
+.quiet-note { color:#555; font-size:.94rem; }
+.planner-controls { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1rem 0 .6rem; padding:.85rem 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:.78rem; }
+.planner-controls label { display:grid; gap:.35rem; color:#555; }
+.planner-controls select { width:100%; padding:.42rem .55rem; border:1px solid #bcc6d0; border-radius:3px; color:#333; background:#fff; font:inherit; }
+.planner-controls input[type="range"] { width:100%; accent-color:var(--accent); }
+.axis-key { display:flex; justify-content:flex-end; gap:1rem; margin-top:.7rem; color:#666; font:700 .7rem/1 system-ui, sans-serif; }
+.axis-key i { display:inline-block; width:14px; height:7px; margin-right:.25rem; vertical-align:middle; }
+.rna-key { background:var(--accent); }
+.protein-key { border-radius:50%; background:var(--secondary); }
+.chart-head, .tick-label, .cell-name, .cell-meta, .value-label, .missing-label, .pair-tag { font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.chart-head { fill:#666; font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.tick-label { fill:#888; font-size:10px; }
+.cell-name { fill:#222; font-size:12px; font-weight:700; }
+.cell-meta { fill:#777; font-size:9px; }
+.value-label { fill:#444; font-size:9px; }
+.missing-label { fill:#999; font-size:9px; font-style:italic; }
+.pair-tag { font-size:9px; font-weight:800; letter-spacing:.06em; }
+.pair-tag.high { fill:var(--accent); }
+.pair-tag.low { fill:#7d6957; }
+.grid-line { stroke:#e7e7e7; stroke-width:1; }
+.zero-line { stroke:#aaa; stroke-width:1; }
+.row-rule { stroke:#efefef; stroke-width:1; }
+.rna-bar { fill:var(--accent); opacity:.7; }
+.rna-bar.pair-high { opacity:1; }
+.rna-bar.pair-low { fill:#7d6957; opacity:.85; }
+.rna-bar.excluded { fill:#c9c9c9; opacity:.55; }
+.protein-dot { fill:var(--secondary); stroke:#fff; stroke-width:1.5; }
+.protein-dot.pair-high { stroke:var(--ink); stroke-width:2; }
+.protein-dot.pair-low { fill:#a5907e; stroke:var(--ink); stroke-width:2; }
+.protein-dot.excluded { fill:#ccc; }
+.assay-plan { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; margin-top:.8rem; font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:.79rem; line-height:1.45; }
+.assay-plan p { margin:0; padding:.65rem .75rem; border-top:2px solid var(--ink); background:#f5f5f3; }
+.assay-plan span { display:block; margin-bottom:.25rem; color:#777; font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.table-wrap { overflow-x:auto; margin-top:1rem; }
+#evidence-table { width:100%; border-collapse:collapse; font: .7rem/1.35 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+#evidence-table th, #evidence-table td { padding:.38rem .32rem; border-bottom:1px solid #e5e5e5; text-align:right; white-space:nowrap; }
+#evidence-table th:first-child, #evidence-table td:first-child { text-align:left; }
+#evidence-table thead th { color:#666; font-size:.65rem; letter-spacing:.03em; }
+#evidence-table tbody th span { margin-left:.25rem; color:var(--accent); font-size:.61rem; text-transform:uppercase; }
+.comparison button { grid-template-columns:minmax(135px, 1.5fr) 1fr 58px; }
+.comparison button.active { color:var(--ink); font-weight:700; }
+.comparison button.active .comparison-fill { background:var(--secondary); }
+.theme-readout { margin-top:1rem; padding-top:1rem; border-top:1px solid var(--rule); font: .84rem/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.theme-readout p { margin:.25rem 0 .65rem; }
+.gene-list { display:flex; flex-wrap:wrap; gap:.3rem; }
+.gene-list code { padding:.08rem .28rem; border:1px solid #ddd; background:#fff; color:#444; font-size:.68rem; }
+@media (max-width:540px) {
+  .planner-controls, .assay-plan { grid-template-columns:1fr; }
+  .axis-key { justify-content:flex-start; }
+  .comparison button { grid-template-columns:105px 1fr 52px; gap:.45rem; }
+}
