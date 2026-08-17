@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An ovarian cancer experiment-planning analysis prepared by Cathy Liu for the Fuh Lab at UCSF.">
+  <title>Exploratory Analyses Inspired by the Fuh Lab</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <main class="page">
+    <h1>Exploratory Analyses Inspired by the Fuh Lab</h1>
+    <div class="byline">
+      Cathy Liu · Molecular biology + computational analysis · <a href="mailto:cathyliu014@gmail.com">cathyliu014@gmail.com</a><br>
+      Prepared for the Fuh Lab, University of California, San Francisco<br>
+      Personal exploratory project, August 2026
+    </div>
+
+    <nav class="section-nav" aria-label="Demo sections">
+      <a href="#motivation">Motivation</a>
+      <a href="#a1">Experiment planner</a>
+      <a href="#a2">Patient-derived themes</a>
+      <a href="#relevance">Relevance</a>
+    </nav>
+
+    <p class="opening">Aggressive gynecologic cancers do not fail treatment through one mechanism. The Fuh Lab connects tumor-intrinsic targets such as AXL with stromal programs such as DDR2-dependent ferroptosis resistance—and asks which experimental system can actually resolve each question.</p>
+    <p>I built a small experiment-planning tool that turns public ovarian cell-line RNA, proteomics and culture metadata into a high/low validation pair, or an explicit warning that the question needs a different model.</p>
+
+    <hr id="motivation">
+    <section aria-labelledby="how-heading">
+      <h2 id="how-heading">How it works</h2>
+      <p>Choose a Fuh-relevant marker, decide whether both RNA and protein evidence are required, and cap the doubling time you are willing to carry. The plot retains all seven ovarian-designated NCI‑60 lines. It recommends the strongest eligible contrast, then translates that contrast into a bench-ready first pass with controls.</p>
+      <p class="quiet-note">The recommendation is deliberately allowed to fail. A missing or poorly matched model is itself an actionable result.</p>
+    </section>
+
+    <hr id="a1">
+    <section aria-labelledby="analysis-one-heading">
+      <h2 id="analysis-one-heading">Analysis 1 — Choose a defensible first-pass model</h2>
+      <div class="experiment">
+        <div class="exp-label">Experiment-planning question</div>
+        <div class="exp-title">Which two ovarian lines create an interpretable contrast without creating an impractical culture plan?</div>
+        <p>RNA bars are NCI‑60-wide five-platform z-scores. Protein dots show the independently scaled SWATH summary when it exists. Neither axis is silently imputed.</p>
+      </div>
+
+      <div class="panel">
+        <form class="searchbar" id="target-form">
+          <label class="sr-only" for="target-select">Research target</label>
+          <input id="target-select" list="target-options" autocomplete="off" placeholder="e.g. AXL · tumor-intrinsic signaling">
+          <datalist id="target-options"></datalist>
+          <button type="submit">Plan</button>
+        </form>
+        <div class="chips" id="suggestions"><span>Try:</span></div>
+
+        <div class="planner-controls" aria-label="Experiment constraints">
+          <label for="evidence-select">Evidence rule
+            <select id="evidence-select">
+              <option value="matched">Require RNA + protein</option>
+              <option value="rna">Allow RNA screen</option>
+            </select>
+          </label>
+          <label for="doubling-input">Maximum doubling time <strong id="doubling-value">50 h</strong>
+            <input id="doubling-input" type="range" min="30" max="50" step="1" value="50">
+          </label>
+        </div>
+
+        <div class="axis-key" aria-hidden="true"><span><i class="rna-key"></i> RNA z-score</span><span><i class="protein-key"></i> SWATH protein</span></div>
+        <svg id="hero-viz" class="viz" viewBox="0 0 600 430" role="img" aria-label="RNA and protein evidence across seven ovarian cell lines"></svg>
+        <div class="readout" id="readout" aria-live="polite"></div>
+        <div class="assay-plan" id="assay-plan"></div>
+        <div class="table-wrap"><table id="evidence-table"><caption class="sr-only">Underlying values for the selected marker</caption></table></div>
+        <figcaption>NCI CellMiner / Bioconductor rcellminerData 2.34.0. Seven ovarian-designated NCI‑60 lines; RNA z-scores and median available SWATH peptide summary per gene. Doubling time, specimen source and prior treatment come from the distributed line metadata.</figcaption>
+      </div>
+
+      <div class="metric-row">
+        <div class="metric"><span class="metric-val" id="metric-one">7</span><span class="metric-desc">ovarian lines retained</span></div>
+        <div class="metric"><span class="metric-val" id="metric-two">2</span><span class="metric-desc">ascites-derived lines</span></div>
+        <div class="metric"><span class="metric-val" id="metric-three">—</span><span class="metric-desc" id="metric-three-label">selected RNA contrast</span></div>
+      </div>
+    </section>
+
+    <hr id="a2">
+    <section aria-labelledby="analysis-two-heading">
+      <h2 id="analysis-two-heading">Analysis 2 — Keep the cell-line choice connected to patient-derived biology</h2>
+      <div class="experiment">
+        <div class="exp-label">Fuh-associated 2025 ovarian-cancer supplement</div>
+        <div class="exp-title">Where do frequently mutated input genes intersect the paper’s CompBio themes?</div>
+        <p>The deposited supplement lists 176 unique frequently mutated input genes and the genes assigned to each generated theme. Select a theme to inspect its independently computed overlap.</p>
+      </div>
+      <div class="panel">
+        <span class="label-inline">Select a theme</span>
+        <div class="comparison" id="comparison"></div>
+        <div class="theme-readout" id="theme-readout" aria-live="polite"></div>
+      </div>
+      <p>The largest displayed overlap is not treated as a new enrichment result; there is no null model here. It is a transparent way to bring a cell-line validation plan back to the extracellular-matrix, adhesion and developmental contexts observed in the paired clinical study.</p>
+    </section>
+
+    <hr id="relevance">
+    <section aria-labelledby="relevance-heading">
+      <h2 id="relevance-heading">Why this matters for the lab</h2>
+      <p>The result is a concrete lab decision: which lines to thaw first, which baseline assay to run, and when not to use a tumor-only system. For AXL, the default matched-evidence plan favors a consistent RNA–protein contrast. For DDR2, the absence of SWATH coverage and uniformly below-panel RNA correctly redirects the work to a CAF model rather than manufacturing confidence.</p>
+
+      <h2>What I would bring</h2>
+      <p>I would bring a practical bench–analysis workflow: maintain clean, traceable cultures; use Western blotting, qPCR, flow or functional readouts with appropriate controls; and organize the resulting data so that the next experiment is easier to defend. This demo is an example of how I would connect inventory constraints, assay evidence and quantitative interpretation before committing samples and time.</p>
+
+      <h2>Methods note</h2>
+      <p class="methods-note">This is an exploratory planning analysis, not evidence of treatment response or causality. RNA values are relative to the full NCI‑60 panel; SWATH values remain on their distributed scale and are not numerically compared with RNA. Protein peptides are summarized by their within-gene median. Cell identity, mycoplasma status and baseline expression must be confirmed locally. Suggested perturbations and controls are prospective. Sources: <a href="https://discover.nci.nih.gov/cellminer/">NCI CellMiner</a>, <a href="https://bioconductor.org/packages/rcellminerData">rcellminerData 2.34.0</a>, the <a href="https://aacr.figshare.com/articles/journal_contribution/Supplementary_Materials_from_Multiomic_Characterization_of_Pre-_and_Post-Neoadjuvant_Chemotherapy_Treated_Ovarian_Cancer_Identifies_Features_Associated_with_Clinical_Response/30125638">Fuh-associated 2025 supplement</a>, the <a href="https://pubmed.ncbi.nlm.nih.gov/39241522/">DDR2 study</a>, and the <a href="https://fuhlab.ucsf.edu/">Fuh Lab</a>.</p>
+    </section>
+
+    <footer>
+      Cathy Liu · <a href="mailto:cathyliu014@gmail.com">cathyliu014@gmail.com</a> · <a href="tel:+14152163799">415-216-3799</a><br>
+      Epilepsy neurostimulation project, <a href="https://arxiv.org/abs/2606.04339">arXiv:2606.04339</a>
+    </footer>
+  </main>
+
+  <script src="data.js?v=2"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
