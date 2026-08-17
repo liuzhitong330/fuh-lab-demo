@@ -91,7 +91,7 @@
       const eligible = eligibleCells(target).includes(cell);
       svg.appendChild(el("line", { x1: 0, y1: y + 20, x2: width, y2: y + 20, class: "row-rule" }));
       svg.appendChild(el("text", { x: labelX, y: y + 2, class: "cell-name" }, cell.name));
-      svg.appendChild(el("text", { x: labelX, y: y + 16, class: "cell-meta" }, `${cell.doubling} h · ${cell.source === "NA" ? "source n/a" : cell.source}`));
+      svg.appendChild(el("text", { x: labelX, y: y + 16, class: "cell-meta" }, `${cell.doubling} h · ${cell.source === "Not reported" ? "source n/r" : cell.source}`));
       const x = rnaX(cell.rna);
       svg.appendChild(el("rect", {
         x: Math.min(zeroX, x), y: y - 8, width: Math.max(2, Math.abs(x - zeroX)), height: 13,
