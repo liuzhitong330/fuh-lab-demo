@@ -10,7 +10,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "IGROV1",
           "doubling": 31.0,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Rad",
           "p53": "MT",
           "rna": -0.977,
@@ -28,7 +28,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-4",
           "doubling": 41.4,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "CyPh/CsPt/Adr",
           "p53": "WT",
           "rna": -0.628,
@@ -37,8 +37,8 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-5",
           "doubling": 48.8,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": 1.08,
           "protein": 4.631
@@ -46,7 +46,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-8",
           "doubling": 26.1,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Ctx/Adr/CsPt/CyPh",
           "p53": "MT",
           "rna": 0.999,
@@ -57,15 +57,15 @@ window.FUH_LAB_DEMO_DATA = {
           "doubling": 48.7,
           "source": "Ascites",
           "priorTreatment": "Thiotepa",
-          "p53": "?",
+          "p53": "Not reported",
           "rna": 1.215,
           "protein": 5.043
         },
         {
           "name": "NCI/ADR-RES",
           "doubling": 34.0,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": 1.008,
           "protein": 4.978
@@ -84,7 +84,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "IGROV1",
           "doubling": 31.0,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Rad",
           "p53": "MT",
           "rna": -0.488,
@@ -102,7 +102,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-4",
           "doubling": 41.4,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "CyPh/CsPt/Adr",
           "p53": "WT",
           "rna": -0.426,
@@ -111,8 +111,8 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-5",
           "doubling": 48.8,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": -0.66,
           "protein": null
@@ -120,7 +120,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-8",
           "doubling": 26.1,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Ctx/Adr/CsPt/CyPh",
           "p53": "MT",
           "rna": -0.507,
@@ -131,15 +131,15 @@ window.FUH_LAB_DEMO_DATA = {
           "doubling": 48.7,
           "source": "Ascites",
           "priorTreatment": "Thiotepa",
-          "p53": "?",
+          "p53": "Not reported",
           "rna": -0.578,
           "protein": null
         },
         {
           "name": "NCI/ADR-RES",
           "doubling": 34.0,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": -0.364,
           "protein": null
@@ -158,7 +158,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "IGROV1",
           "doubling": 31.0,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Rad",
           "p53": "MT",
           "rna": 0.242,
@@ -176,7 +176,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-4",
           "doubling": 41.4,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "CyPh/CsPt/Adr",
           "p53": "WT",
           "rna": -0.591,
@@ -185,8 +185,8 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-5",
           "doubling": 48.8,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": -0.752,
           "protein": null
@@ -194,7 +194,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-8",
           "doubling": 26.1,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Ctx/Adr/CsPt/CyPh",
           "p53": "MT",
           "rna": -0.32,
@@ -205,15 +205,15 @@ window.FUH_LAB_DEMO_DATA = {
           "doubling": 48.7,
           "source": "Ascites",
           "priorTreatment": "Thiotepa",
-          "p53": "?",
+          "p53": "Not reported",
           "rna": 1.15,
           "protein": null
         },
         {
           "name": "NCI/ADR-RES",
           "doubling": 34.0,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": -0.13,
           "protein": null
@@ -232,7 +232,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "IGROV1",
           "doubling": 31.0,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Rad",
           "p53": "MT",
           "rna": 0.426,
@@ -250,7 +250,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-4",
           "doubling": 41.4,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "CyPh/CsPt/Adr",
           "p53": "WT",
           "rna": 0.424,
@@ -259,8 +259,8 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-5",
           "doubling": 48.8,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": 1.096,
           "protein": null
@@ -268,7 +268,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-8",
           "doubling": 26.1,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Ctx/Adr/CsPt/CyPh",
           "p53": "MT",
           "rna": -1.29,
@@ -279,15 +279,15 @@ window.FUH_LAB_DEMO_DATA = {
           "doubling": 48.7,
           "source": "Ascites",
           "priorTreatment": "Thiotepa",
-          "p53": "?",
+          "p53": "Not reported",
           "rna": 1.207,
           "protein": null
         },
         {
           "name": "NCI/ADR-RES",
           "doubling": 34.0,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": -0.638,
           "protein": null
@@ -306,7 +306,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "IGROV1",
           "doubling": 31.0,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Rad",
           "p53": "MT",
           "rna": 0.636,
@@ -324,7 +324,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-4",
           "doubling": 41.4,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "CyPh/CsPt/Adr",
           "p53": "WT",
           "rna": 1.481,
@@ -333,8 +333,8 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-5",
           "doubling": 48.8,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": 0.776,
           "protein": 4.872
@@ -342,7 +342,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-8",
           "doubling": 26.1,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Ctx/Adr/CsPt/CyPh",
           "p53": "MT",
           "rna": -0.09,
@@ -353,15 +353,15 @@ window.FUH_LAB_DEMO_DATA = {
           "doubling": 48.7,
           "source": "Ascites",
           "priorTreatment": "Thiotepa",
-          "p53": "?",
+          "p53": "Not reported",
           "rna": 0.836,
           "protein": 4.336
         },
         {
           "name": "NCI/ADR-RES",
           "doubling": 34.0,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": 0.102,
           "protein": 3.76
@@ -380,7 +380,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "IGROV1",
           "doubling": 31.0,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Rad",
           "p53": "MT",
           "rna": -0.745,
@@ -398,7 +398,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-4",
           "doubling": 41.4,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "CyPh/CsPt/Adr",
           "p53": "WT",
           "rna": -0.732,
@@ -407,8 +407,8 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-5",
           "doubling": 48.8,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": -0.084,
           "protein": 4.553
@@ -416,7 +416,7 @@ window.FUH_LAB_DEMO_DATA = {
         {
           "name": "OVCAR-8",
           "doubling": 26.1,
-          "source": "nan",
+          "source": "Not reported",
           "priorTreatment": "Ctx/Adr/CsPt/CyPh",
           "p53": "MT",
           "rna": 0.86,
@@ -427,15 +427,15 @@ window.FUH_LAB_DEMO_DATA = {
           "doubling": 48.7,
           "source": "Ascites",
           "priorTreatment": "Thiotepa",
-          "p53": "?",
+          "p53": "Not reported",
           "rna": -0.43,
           "protein": 4.69
         },
         {
           "name": "NCI/ADR-RES",
           "doubling": 34.0,
-          "source": "nan",
-          "priorTreatment": "nan",
+          "source": "Not reported",
+          "priorTreatment": "Not reported",
           "p53": "MT",
           "rna": 1.235,
           "protein": 5.255
